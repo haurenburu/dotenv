@@ -75,6 +75,10 @@ output HDMI-A-1 pos 1366 0
     # volume
     bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    # media control
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
     # print
     bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
     # Start a terminal
